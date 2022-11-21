@@ -2,7 +2,7 @@
  * @Author: Fogerman 2363478270@qq.com
  * @Date: 2022-11-22 00:03:33
  * @LastEditors: Fogerman 2363478270@qq.com
- * @LastEditTime: 2022-11-22 01:59:32
+ * @LastEditTime: 2022-11-22 02:13:26
  * @FilePath: \作业三四\html\first.html
  * @Description: 
  * 
@@ -19,17 +19,17 @@
     <style>
         .box{
             margin: 0 auto;
-            width: 350px;
+            width: 400px;
         }
         .head{
             margin: 0 auto;
-            width: 350px;
-            height: 20px;
+            width: 400px;
+            height: 35px;
         }
         .time{
             margin: 0 auto;
             width: 350px;
-            height: 20px;
+            height: 25px;
             text-align: center;
         }
         .code{
@@ -45,7 +45,7 @@
         }
         .infoline{
             margin: 0 auto;
-            height: 40px;
+            height: 45px;
             font-size: 15px;
             width: 300px;
             text-align: left;
@@ -64,8 +64,8 @@
         }
         .tail{
             margin: 0 auto;
-            width: 350px;
-            height: 400px;
+            width: 400px;
+            height: 500px;
             
         }
         .showTime{
@@ -76,7 +76,7 @@
 <body>
     <p class="box">
         <p class="head">
-            <img src="title.png" alt="" width="350px">
+            <img src="title.png" alt="" width="500px">
         </p>
         <p class="time">
             <div class="showTime"></div>
@@ -93,7 +93,7 @@
                 var m = dt.getMinutes(); //获取分
                 var s = dt.getSeconds(); //获取秒
                 
-                document.querySelector(".showTime").innerHTML = '<b><font style="font-size: 18pt;"><center>'+y + "/" + mt +"/" +day +" " 
+                document.querySelector(".showTime").innerHTML = '<b><font style="font-size: 20pt;"><center>'+y + "/" + mt +"/" +day +" " 
                     + h +":"+((m<10)?"0":"")+m+":" +((s<10)?"0":"")+s+'</center></font></b>';
                 t = setTimeout(time, 1000); //设定定时器，循环运行
                 
@@ -123,7 +123,7 @@
             <p class="msgline"><b>若出校二维码未显示，请点击 “生成出校码” 重新加载。</b></p>
         </p>
         <p class="tail">
-            <img src="tail.png" alt="" width="350px">
+            <img src="tail.png" alt="" height="600px">
         </p>
     </p>
 </body>
