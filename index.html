@@ -2,7 +2,7 @@
  * @Author: Fogerman 2363478270@qq.com
  * @Date: 2022-11-22 00:03:33
  * @LastEditors: Fogerman 2363478270@qq.com
- * @LastEditTime: 2022-11-22 01:52:22
+ * @LastEditTime: 2022-11-22 01:59:32
  * @FilePath: \作业三四\html\first.html
  * @Description: 
  * 
@@ -13,7 +13,8 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" /> 
+
     <title>申请人确认-校内学生出校申请</title>
     <style>
         .box{
@@ -28,13 +29,13 @@
         .time{
             margin: 0 auto;
             width: 350px;
-            height: 15px;
+            height: 20px;
             text-align: center;
         }
         .code{
             margin: 0 auto;
-            height: 50px;
-            width: 350px;
+            height: 60px;
+            width: 220px;
             text-align: left;
         }
         .info{
@@ -56,9 +57,10 @@
         }
         .msgline{
             margin: 0 auto;
-            width: 340px;
+            width: 310px;
             text-align: left;
-            font-size: 10pt;
+            font-size: 10pt; 
+            color: rgb(220,20,20);
         }
         .tail{
             margin: 0 auto;
@@ -91,7 +93,7 @@
                 var m = dt.getMinutes(); //获取分
                 var s = dt.getSeconds(); //获取秒
                 
-                document.querySelector(".showTime").innerHTML = '<b><font style="font-size: 13pt;"><center>'+y + "/" + mt +"/" +day +" " 
+                document.querySelector(".showTime").innerHTML = '<b><font style="font-size: 18pt;"><center>'+y + "/" + mt +"/" +day +" " 
                     + h +":"+((m<10)?"0":"")+m+":" +((s<10)?"0":"")+s+'</center></font></b>';
                 t = setTimeout(time, 1000); //设定定时器，循环运行
                 
@@ -99,7 +101,7 @@
             </script>
         </p>
         <p class="code">
-            <img src="code.jpg" alt="" width="35px">
+            <img src="code.jpg" alt="" width="50px">
         </p>
         <p class="info">
             <p class="infoline">姓名
@@ -118,7 +120,7 @@
             </p>
         </p>
         <p class="msg">
-            <p style="font-size: 5pt; color: rgb(220,20,20);" class="msgline"><b>若出校二维码未显示，请点击 “生成出校码” 重新加载。</b></p>
+            <p class="msgline"><b>若出校二维码未显示，请点击 “生成出校码” 重新加载。</b></p>
         </p>
         <p class="tail">
             <img src="tail.png" alt="" width="350px">
