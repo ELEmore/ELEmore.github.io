@@ -1,0 +1,129 @@
+<!--
+ * @Author: Fogerman 2363478270@qq.com
+ * @Date: 2022-11-22 00:03:33
+ * @LastEditors: Fogerman 2363478270@qq.com
+ * @LastEditTime: 2022-11-22 01:28:57
+ * @FilePath: \作业三四\html\first.html
+ * @Description: 
+ * 
+ * Copyright (c) 2022 by Fogerman 2363478270@qq.com, All Rights Reserved. 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>申请人确认-校内学生出校申请</title>
+    <style>
+        .box{
+            margin: 0 auto;
+            width: 250px;
+        }
+        .head{
+            margin: 0 auto;
+            width: 250px;
+            height: 20px;
+        }
+        .time{
+            margin: 0 auto;
+            width: 250px;
+            height: 15px;
+            text-align: center;
+        }
+        .code{
+            margin: 0 auto;
+            height: 50px;
+            width: 150px;
+            text-align: left;
+        }
+        .info{
+            margin: 0 auto;
+            width: 250px;
+            text-align: center;
+        }
+        .infoline{
+            margin: 0 auto;
+            height: 30px;
+            font-size: 10px;
+            width: 230px;
+            text-align: left;
+        }
+        .msg{
+            margin: 0 auto;
+            width: 125px;
+            font-size: 8px;
+            text-align: center;
+        }
+        .msgline{
+            margin: 0 auto;
+            font-size: 8px;
+            width: 240px;
+            text-align: left;
+        }
+        .tail{
+            margin: 0 auto;
+            width: 250px;
+            height: 300px;
+            
+        }
+        .showTime{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <p class="box">
+        <p class="head">
+            <img src="title.png" alt="" width="255px">
+        </p>
+        <p class="time">
+            <div class="showTime"></div>
+            <script>
+            var t = null;
+            t = setTimeout(time, 1000); //開始运行
+            function time() {
+                clearTimeout(t); //清除定时器
+                dt = new Date();
+                var y = dt.getFullYear();
+                var mt = dt.getMonth() + 1;
+                var day = dt.getDate();
+                var h = dt.getHours(); //获取时
+                var m = dt.getMinutes(); //获取分
+                var s = dt.getSeconds(); //获取秒
+                
+                document.querySelector(".showTime").innerHTML = '<b><font style="font-size: 13pt;"><center>'+y + "/" + mt +"/" +day +" " 
+                    + h +":"+((m<10)?"0":"")+m+":" +((s<10)?"0":"")+s+'</center></font></b>';
+                t = setTimeout(time, 1000); //设定定时器，循环运行
+                
+            }
+            </script>
+        </p>
+        <p class="code">
+            <img src="code.jpg" alt="" width="35px">
+        </p>
+        <p class="info">
+            <p class="infoline">姓名
+                <span style="color: red;">*</span>
+                &emsp;&emsp;&emsp;庞仁静
+            </p>
+            <p class="infoline">
+                学号
+                <span style="color: red;">*</span>
+                &emsp;&emsp;&emsp;19341094
+            </p>
+            <p class="infoline" style="margin-top: 10; height: 20px">
+                
+                    培养单位
+                    <span style="color: red;">*</span>
+            </p>
+        </p>
+        <p class="msg">
+            <p style="color: rgb(220,20,20); font-size:5pt" class="msgline"><b>若出校二维码未显示，请点击 “生成出校码” 重新加载。</b></p>
+        </p>
+        <p class="tail">
+            <img src="tail.png" alt="" width="255px">
+        </p>
+    </p>
+</body>
+</html>
